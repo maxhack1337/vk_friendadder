@@ -1,0 +1,26 @@
+{
+   "action": {
+      "default_icon": "icon48.png",
+      "default_popup": "src/pages/popup/index.html"
+   },
+   "background": {
+      "service_worker": "src/pages/background/index.js"
+   },
+   "content_scripts": [ {
+      "js": [ "src/pages/content/index.js" ],
+      "matches": [ "https://vk.com/*" ]
+   } ],
+   "description": "Легальная «накрутка» друзей ВК",
+   "icons": {
+      "128": "icon128.png"
+   },
+   "manifest_version": 3,
+   "name": "VK FriendAdder",
+   "options_page": "src/pages/options/index.html",
+   "permissions": [  ],
+   "version": "0.2",
+   "web_accessible_resources": [ {
+      "matches": [ "https://vk.com/*" ],
+      "resources": [ "assets/js/*.js", "assets/css/*.css", "icon128.png", "icon48.png" ]
+   } ]
+}
